@@ -81,7 +81,7 @@ aws cloudformation deploy --template-file /codebuild/output/src498193408/src/tem
 [Container] 2020/05/17 17:41:17 Entering phase POST_BUILD
 [Container] 2020/05/17 17:41:17 Running command sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
 
-[Container] 2020/05/17 17:41:17 Running command protego fsp -c arn:aws:cloudformation:us-east-1:392332258562:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978 -R us-east-1
+[Container] 2020/05/17 17:41:17 Running command protego fsp -c arn:aws:cloudformation:us-east-1:aws-account-id:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978 -R us-east-1
 [cloudguard-cli: fsp] FSP:: loadDependencies 
 [cloudguard-cli: fsp] Initializing... 
 Updating FSP Plugin | [----------------------------------------] 0% | ETA: 0s
@@ -89,23 +89,23 @@ Updating FSP Plugin | [============================------------] 70% | ETA: 6s
 Updating FSP Plugin | [========================================] 100% | ETA: 0s
 
 [cloudguard-cli: fsp] Initializing, Done. 
-[cloudguard-cli] Fetching functions list from CF stack arn:aws:cloudformation:us-east-1:392332258562:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978
+[cloudguard-cli] Fetching functions list from CF stack arn:aws:cloudformation:us-east-1:aws-account-id:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978
 [cloudguard-cli] Protego FSP (v1.4.25) Instrumentation Succeeded ✓ 
-[cloudguard-cli]   - function ARN  :  arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-hello:$LATEST
+[cloudguard-cli]   - function ARN  :  arn:aws:lambda:us-east-1:aws-account-id:function:my-first-service-dev-hello:$LATEST
 [cloudguard-cli]   - runtime       :  nodejs10.x
 [cloudguard-cli]   - layer         :  arn:aws:lambda:us-east-1:674525042795:layer:metallica-protego-fsp-nodejs-layer:47
-[cloudguard-cli]   - environment   :  {"PROTEGO_FSP_CUSTOMER_ACCOUNT_ID":"392332258562:ce53f6d8773ba09596db7bb4484f63e4","NODE_OPTIONS":"--require @protego/protego-node-agent"}
+[cloudguard-cli]   - environment   :  {"PROTEGO_FSP_CUSTOMER_ACCOUNT_ID":"<aws-account>:ce53f6d8773ba09596db7bb4484f63e4","NODE_OPTIONS":"--require @protego/protego-node-agent"}
 [cloudguard-cli] Protego FSP (v1.4.25) Instrumentation Succeeded ✓ 
-[cloudguard-cli]   - function ARN  :  arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-custom-resource-apigw-cw-role:$LATEST
+[cloudguard-cli]   - function ARN  :  arn:aws:lambda:us-east-1:<aws-account>:function:my-first-service-dev-custom-resource-apigw-cw-role:$LATEST
 [cloudguard-cli]   - runtime       :  nodejs12.x
 [cloudguard-cli]   - layer         :  arn:aws:lambda:us-east-1:674525042795:layer:metallica-protego-fsp-nodejs-layer:47
-[cloudguard-cli]   - environment   :  {"PROTEGO_FSP_CUSTOMER_ACCOUNT_ID":"392332258562:eb0b32336f45de4ed8b11d7ab2d34308","NODE_OPTIONS":"--require @protego/protego-node-agent"}
+[cloudguard-cli]   - environment   :  {"PROTEGO_FSP_CUSTOMER_ACCOUNT_ID":"<aws-account-id>:eb0b32336f45de4ed8b11d7ab2d34308","NODE_OPTIONS":"--require @protego/protego-node-agent"}
 [cloudguard-cli] 
 Protego - FSP (1.4.25) Summary:
 
   Protected Functions (2) :
-    ✓ arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-hello:$LATEST:  Protected 
-    ✓ arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-custom-resource-apigw-cw-role:$LATEST:  Protected 
+    ✓ arn:aws:lambda:us-east-1:<aws-account-id>:function:my-first-service-dev-hello:$LATEST:  Protected 
+    ✓ arn:aws:lambda:us-east-1:<aws-account-id>:function:my-first-service-dev-custom-resource-apigw-cw-role:$LATEST:  Protected 
  
 ```
 
