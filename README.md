@@ -26,7 +26,7 @@ PLease refer to the AWS CodePipeline log showing the CICD building and deploying
 
 [Container] 2020/05/17 17:40:16 Running command export  AWS_REGION=us-east-1
 
-[Container] 2020/05/17 17:40:16 Running command protego proact -m template.yml -t eyJhcGlUb2tlbiI6ICJCUkFiVzBPSDlXNElMTDU4TUxqRHI1Z21uTmc3aGlwZTFHeEd6YTFqIiwgImVuZHBvaW50IjogImh0dHBzOi8vbWV0YWxsaWNhLmFwaS5wcm90ZWdvLmlvIiwgInN0YWdlIjogIm1ldGFsbGljYSJ9
+[Container] 2020/05/17 17:40:16 Running command protego proact -m template.yml 
 Container cmd: docker
 Container options empty
 Returning docker user: 0:0
@@ -42,11 +42,10 @@ Updating Proact | [========================================] 100% | ETA: 0s
 [cloudguard-cli: proact]  | --- Scanning --- | please wait, this action may take some time ... 
 Using Only Sam template: template.yml
 Parsing Template ... -······················Parsing Template ... \······················Parsing Template ... |······················Parsing Template ... /······················Parsing Template ... -······················Parsing Template ... \······················
-·[K·[A
-( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········
-·[K·[A
 
-λ: (·[32m✓·[0m) GetHelloWorld
+( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) -···········( 0 / 1 ) \···········( 0 / 1 ) |···········( 0 / 1 ) /···········( 0 / 1 ) 
+
+[32m✓·[0m) GetHelloWorld
 -----------------------------------
     PermissiveRole : ·[33mWarning (Low)·[0m - Role Too Permissive
     VulnerableDependency : ·[33mWarning (High)·[0m - Found Vulnerable Dependencies
@@ -82,7 +81,7 @@ aws cloudformation deploy --template-file /codebuild/output/src498193408/src/tem
 [Container] 2020/05/17 17:41:17 Entering phase POST_BUILD
 [Container] 2020/05/17 17:41:17 Running command sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
 
-[Container] 2020/05/17 17:41:17 Running command protego fsp -c arn:aws:cloudformation:us-east-1:392332258562:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978 -t eyJhcGlUb2tlbiI6ICJCUkFiVzBPSDlXNElMTDU4TUxqRHI1Z21uTmc3aGlwZTFHeEd6YTFqIiwgImVuZHBvaW50IjogImh0dHBzOi8vbWV0YWxsaWNhLmFwaS5wcm90ZWdvLmlvIiwgInN0YWdlIjogIm1ldGFsbGljYSJ9 -R us-east-1
+[Container] 2020/05/17 17:41:17 Running command protego fsp -c arn:aws:cloudformation:us-east-1:392332258562:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978 -R us-east-1
 [cloudguard-cli: fsp] FSP:: loadDependencies 
 [cloudguard-cli: fsp] Initializing... 
 Updating FSP Plugin | [----------------------------------------] 0% | ETA: 0s
