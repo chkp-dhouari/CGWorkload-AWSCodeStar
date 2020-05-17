@@ -113,5 +113,5 @@ Protego - FSP (1.4.25) Summary:
 
 Here we can see the CloudGuard FSP (Function Self Protection) for runtime security is applied:
 
-  ![header image](cdw.png)
+  ![header image](cdw.jpg)
   
