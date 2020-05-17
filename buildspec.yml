@@ -30,7 +30,7 @@ phases:
       # Do not remove this statement. This command is required for AWS CodeStar projects.
       # Update the AWS Partition, AWS Region, account ID and project ID in the project ARN on template-configuration.json file so AWS CloudFormation can tag project resources.
       - sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
-      - protego fsp -c arn:aws:cloudformation:us-east-1:392332258562:stack/awscodestar-reggaethon/b9cf9ec0-983d-11ea-bd8f-0ed5acf75591 -t eyJhcGlUb2tlbiI6ICJCUkFiVzBPSDlXNElMTDU4TUxqRHI1Z21uTmc3aGlwZTFHeEd6YTFqIiwgImVuZHBvaW50IjogImh0dHBzOi8vbWV0YWxsaWNhLmFwaS5wcm90ZWdvLmlvIiwgInN0YWdlIjogIm1ldGFsbGljYSJ9 -R us-east-1
+      - protego fsp -c arn:aws:cloudformation:us-east-1:392332258562:stack/my-first-service-dev/2060e8a0-9065-11ea-81f7-12c270bd7978 -t eyJhcGlUb2tlbiI6ICJCUkFiVzBPSDlXNElMTDU4TUxqRHI1Z21uTmc3aGlwZTFHeEd6YTFqIiwgImVuZHBvaW50IjogImh0dHBzOi8vbWV0YWxsaWNhLmFwaS5wcm90ZWdvLmlvIiwgInN0YWdlIjogIm1ldGFsbGljYSJ9 -R us-east-1
 
 artifacts:
   files:
