@@ -22,7 +22,7 @@ AWS CodeStar allows to create a project to deploy a serverless application using
 
 PLease refer to the AWS CodePipeline log showing the CICD building and deploying the serverless application with an API-Gateway and a Lambda function with Proact scanning the serverless application code and the FSP applied to the API-GW and the Lambda
 
-'''
+```
 
 [Container] 2020/05/17 17:40:16 Running command export  AWS_REGION=us-east-1
 
@@ -107,8 +107,7 @@ Protego - FSP (1.4.25) Summary:
     ✓ arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-hello:$LATEST:  Protected 
     ✓ arn:aws:lambda:us-east-1:392332258562:function:my-first-service-dev-custom-resource-apigw-cw-role:$LATEST:  Protected 
  
-
-'''
+```
 
 ## Here we can see the CloudGuard FSP (Function Self Protection) for runtime security is applied:
 
