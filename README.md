@@ -1,6 +1,6 @@
-# AWS CodeStar Serverless web application with CheckPoint CloudGuard Security
-============================================================================
-a simple Node.js web service deployed by AWS CloudFormation to AWS Lambda and Amazon API Gateway and secured with CloudGuard Workload SAST and DAST security. 
+# AWS CodeStar Serverless web application with CheckPoint CloudGuard CICD Security
+===================================================================================
+a simple Node.js web service deployed by AWS CloudFormation to AWS Lambda and Amazon API Gateway and secured with CloudGuard Workload SAST and DAST security in an AWS CodePipeline.
 CloudGuard Workload SAST is Proact with Source code scanning and Posture management 
 CloudGuard Workload DAST is FSP for runtime security of the serverless function and can be applied selectively per function.
 
