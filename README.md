@@ -1,4 +1,4 @@
-# AWS CodeStar Serverless web application with CheckPoint CloudGuard CICD Security
+# AWS CodeStar Serverless web application with CheckPoint CloudGuard Workload CICD Security
 ===================================================================================
 a simple Node.js web service deployed by AWS CloudFormation to AWS Lambda and Amazon API Gateway and secured with CloudGuard Workload SAST and DAST security in an AWS CodePipeline.
 CloudGuard Workload SAST is Proact with Source code scanning and Posture management 
@@ -6,11 +6,8 @@ CloudGuard Workload DAST is FSP for runtime security of the serverless function 
 
 ## What's Here
 ----------------
-
-
-* README.md - this file
-* buildspec.yml - this file is used by AWS CodeBuild to package your
-  application for deployment to AWS Lambda
+* buildspec.yml - this file is used by AWS CodeBuild to define the build stage steps package your
+  application for deployment to AWS Lambda and add the cloudguard workload build and runtime security with proact and FSP(Function Self Protect)
 * index.js - this file contains the sample Node.js code for the web service
 * template.yml - this file contains the AWS Serverless Application Model (AWS SAM) used
   by AWS CloudFormation to deploy your application to AWS Lambda and Amazon API
